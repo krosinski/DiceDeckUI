@@ -1,0 +1,42 @@
+<div class="containter rot text-center">
+    <div class="row background-img" ng-controller="BoardCtrl">
+        <div id="player-box">
+           <strong class="pull-left">Obecni:</strong><br>
+
+                <strong><p style="color: {{player.color}}" class="pull-left" ng-repeat="player in players track by $index">{{player.username}}</p></strong><br>
+
+        </div>
+        <div id="center-panel">
+
+
+
+          <!--<div class="dice-box" id="custom-dice">
+          </div>-->
+
+          <div class="dice-box" id="dice-box">
+            <img id="d4" src="../img/themes/default/d4.gif" ng-click="rollDice(4, 1)">
+            <img id="d6" src="../img/themes/default/d6.gif" ng-click="rollDice(6, 1)">
+            <img id="d8" src="../img/themes/default/d8.gif" ng-click="rollDice(8, 1)">
+            <img id="d10" src="../img/themes/default/d10.gif" ng-click="rollDice(10, 1)">
+            <img id="d12" src="../img/themes/default/d12.gif" ng-click="rollDice(12, 1)">
+            <img id="d20" src="../img/themes/default/d20.gif" ng-click="rollDice(20, 1)">
+            <img id="d100" src="../img/themes/default/d100.gif" ng-click="rollDice(100, 1)">
+            <slider style="margin-top: -140px; color: red;" floor="1" ceiling="20" step="1" precision="1" ng-model="diceMul"></slider>
+            <p style="margin-top: -30px;"><strong>{{diceMul}}x</strong></p>
+
+          </div>
+          <div class="" id="canvas-img">
+              <div class="pull-left">
+                 <div  ng-repeat="msg in chatLog track by $index">
+                     <p style="{{msg.style}}" class="{{msg.class}} pull-left">{{msg.activity}}: <strong>{{msg.text}}</strong></p>
+                 </div>
+              </div>
+
+          </div>
+          <div id="chat-box" class="">
+              <input id="chat-input" type="text" class="input pull-left" width="" ng-enter="sendChat()" ng-model="currentMessage"/>
+              <button id="chat-button" type="button" class="btn btn-primary btn-block" ng-click="sendChat()" ng-disabled="!playerData.loggedIn">Wyślij gołębia</button>
+          </div>
+        </div>
+    </div>
+</div>
