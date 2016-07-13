@@ -194,7 +194,15 @@ body {
     padding: 20px;
     padding-bottom: 40px;
     overflow-y: hidden;
+
 }
+
+.msg-class {
+  text-align: left;
+  padding-bottom: 0px;
+  padding: 5px;
+}
+
 #chat-box {
     width: 490px;
     height: 35px;

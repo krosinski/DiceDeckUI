@@ -63,7 +63,7 @@ app.controller("RootCtrl", function($rootScope){
       if (data.rolls.length > 1) {
         msg.text = msg.text + " ( " + total + " )";
       }
-      msg.style = "color: " + data.color;
+      msg.style = "color: " + data.color + ";";
       msg.class = "roll-msg";
     }
     console.log("Adding message to chat " + msg);

@@ -28,7 +28,7 @@
           <div class="" id="canvas-img">
               <div class="pull-left">
                  <div  ng-repeat="msg in chatLog track by $index">
-                     <p style="{{msg.style}}" class="{{msg.class}} pull-left">{{msg.activity}}: <strong>{{msg.text}}</strong></p>
+                     <div style="{{msg.style}}" class="msg-class {{msg.class}}">{{msg.activity}}: <strong>{{msg.text}}</strong></div>
                  </div>
               </div>
 
